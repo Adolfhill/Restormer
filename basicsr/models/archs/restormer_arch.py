@@ -283,3 +283,8 @@ class Restormer(nn.Module):
 
         return out_dec_level1
 
+if __name__ == "__main__":
+    img_input = torch.ones((16,3,32,32))
+    model = Restormer()
+    output = model(img_input)
+    print(output.shape)
